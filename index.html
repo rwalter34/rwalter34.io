@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Ron Walter</title>
-<link href="[https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap](https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap)" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --bg: #f5f0e8;
@@ -42,7 +42,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='[http://www.w3.org/2000/svg'%3E%3Cfilter](http://www.w3.org/2000/svg'%3E%3Cfilter) id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9999;
   opacity: 0.5;
@@ -88,8 +88,7 @@ nav {
 
 /* ── SECTIONS ── */
 section {
-  min-height: 100vh;
-  padding: 100px 2rem 60px;
+  padding: 90px 2rem 50px; /* Reduced padding and removed min-height: 100vh */
   max-width: 900px;
   margin: 0 auto;
 }
@@ -101,6 +100,7 @@ section {
   justify-content: center;
   position: relative;
   padding-top: 120px;
+  min-height: 85vh; /* Added so the hero still takes up most of the initial screen */
 }
 
 .hero-tag {
@@ -373,7 +373,7 @@ section {
 .project-card:hover .project-arrow { background: var(--yellow); }
 
 /* ── CONTACT ── */
-#contact { min-height: auto; padding-bottom: 100px; }
+#contact { padding-bottom: 100px; }
 
 .contact-inner {
   display: grid;
@@ -586,13 +586,13 @@ I build things for the web. Clean code, thoughtful design, and a love for solvin
 <div class="contact-link-icon">✉</div>
 hello@ronwalter.com
 </a>
-<a href="[https://github.com/](https://github.com/)" class="contact-link" target="_blank">
+<a href="https://github.com/" class="contact-link" target="_blank">
 <div class="contact-link-icon">GH</div>
-[github.com/ronwalter](https://github.com/ronwalter)
+github.com/ronwalter
 </a>
-<a href="[https://linkedin.com/](https://linkedin.com/)" class="contact-link" target="_blank">
+<a href="https://linkedin.com/" class="contact-link" target="_blank">
 <div class="contact-link-icon">in</div>
-[linkedin.com/in/ronwalter](https://linkedin.com/in/ronwalter)
+linkedin.com/in/ronwalter
 </a>
 </div>
 </div>
@@ -655,7 +655,7 @@ skills.forEach(s => {
   </div>`;
 });
 
-// ── RENDER PROJECTS (Now entirely wrapped in an <a> tag) ──
+// ── RENDER PROJECTS ──
 const list = document.getElementById('projects-list');
 projects.forEach((p, i) => {
   const tagsHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
