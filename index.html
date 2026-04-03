@@ -2,11 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index.html</title>
+    <title>My Portfolio | [Your Name]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <p>This is my first page.</p>
+
+    <nav>
+        <div class="logo">PORTFOLIO.</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
+            <p>I build digital experiences with precision and passion.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img"></div>
+                <h3>Project One</h3>
+                <p>A brief description of the tech stack and the problem you solved.</p>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <h3>Project Two</h3>
+                <p>Focus on the results—did it improve speed? Increase users?</p>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <h3>Project Three</h3>
+                <p>Clean code and intuitive design are the stars here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Let's Connect</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Message" rows="5"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. Built with coffee and curiosity.</p>
+    </footer>
+
 </body>
 </html>
